@@ -7,57 +7,50 @@ const categories = [
     title: "Equipment Trailers",
     description:
       "Heavy-duty equipment trailers built to haul skid steers, mini excavators, and jobsite gear safely across Georgia roads.",
-    image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80",
-    alt: "equipment trailer loaded for jobsite transport",
+    image: "/images/cat-equipment-blank.png",
+    alt: "equipment trailer on the Georgia Trailer Outlet lot",
   },
   {
     title: "Dump Trailers",
     description:
       "Hydraulic dump trailers that make landscaping, construction debris, and material hauling faster with less labor.",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80",
-    alt: "dump trailer on a construction site",
+    image: "/images/cat-dump-blank.png",
+    alt: "dump trailer ready for landscaping and construction hauling",
   },
   {
     title: "Flatbeds",
     description:
       "Open flatbed trailers for lumber, steel, pallets, and oversized loads that need flexible tie-down points.",
-    image:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=80",
-    alt: "flatbed trailer ready for hauling",
+    image: "/images/cat-flatbed-gooseneck-blank.png",
+    alt: "flatbed gooseneck trailer for heavy hauling",
   },
   {
     title: "Tilt Decks",
     description:
       "Low-angle tilt deck trailers that make loading cars, mowers, and equipment easier without a separate ramp set.",
-    image:
-      "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=900&q=80",
+    image: "/images/cat-tilt-blank.png",
     alt: "7x22 tilt deck trailer",
   },
   {
     title: "Enclosed Trailers",
     description:
       "Enclosed cargo trailers from Diamond Cargo and others — secure, weather-protected space for tools, inventory, and mobile businesses.",
-    image:
-      "https://images.unsplash.com/photo-1566576721346-d4a3b44ceba8?auto=format&fit=crop&w=900&q=80",
+    image: "/images/cat-cargo-blank.png",
     alt: "enclosed cargo trailer on the lot",
   },
   {
     title: "Utility Trailers",
     description:
       "Single and tandem axle utility trailers for weekend projects, landscaping, farm work, and everyday hauling around Cartersville.",
-    image:
-      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=900&q=80",
+    image: "/images/cat-utility-load-trail.png",
     alt: "utility trailer parked outdoors",
   },
   {
     title: "Attachments",
     description:
       "Ramps, winches, spare tires, and trailer accessories that outfit your haul the way your work actually demands.",
-    image:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80",
-    alt: "trailer hitch and attachments close-up",
+    image: "/images/cat-attachment.png",
+    alt: "trailer hitch and attachments",
   },
 ];
 
@@ -81,7 +74,7 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[78vh] overflow-hidden bg-brand-black text-brand-white">
         <Image
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2000&q=80"
+          src="/images/main204.jpg"
           alt="aerial view of trailer lot"
           fill
           priority
@@ -133,18 +126,24 @@ export default function HomePage() {
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
               <article key={category.title} className="group">
-                <div className="relative mb-4 aspect-[4/3] overflow-hidden bg-brand-soft">
-                  <Image
-                    src={category.image}
-                    alt={category.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <h3 className="font-display text-2xl tracking-[0.06em] text-brand-black">
-                  {category.title}
-                </h3>
+                <Link
+                  href="/contact"
+                  className="block"
+                  aria-label={`Contact us about ${category.title}`}
+                >
+                  <div className="relative mb-4 flex aspect-[5/3] items-center justify-center overflow-hidden bg-brand-soft transition-colors group-hover:bg-[#e9e9e9]">
+                    <Image
+                      src={category.image}
+                      alt={category.alt}
+                      fill
+                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <h3 className="font-display text-2xl tracking-[0.06em] text-brand-black group-hover:text-brand-red">
+                    {category.title}
+                  </h3>
+                </Link>
                 <p className="mt-2 text-base leading-relaxed text-brand-muted">
                   {category.description}
                 </p>
@@ -224,8 +223,8 @@ export default function HomePage() {
           </div>
           <div className="relative aspect-[5/4] overflow-hidden bg-brand-soft">
             <Image
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
-              alt="rows of trailers on a dealership lot"
+              src="/images/gto-lot.jpg"
+              alt="rows of trailers on the Georgia Trailer Outlet lot"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

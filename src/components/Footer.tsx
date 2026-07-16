@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 import { formatAddress, site } from "@/lib/site";
 
 export default function Footer() {
@@ -6,10 +7,8 @@ export default function Footer() {
     <footer className="mt-auto bg-brand-black text-brand-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-display text-2xl tracking-[0.06em]">
-            Georgia Trailer <span className="text-brand-red">Outlet</span>
-          </p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
+          <Logo />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
             {site.positioning}
           </p>
         </div>

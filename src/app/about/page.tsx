@@ -110,7 +110,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="relative aspect-[4/3] overflow-hidden bg-brand-soft">
               <Image
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+                src="/images/gto-lot.jpg"
                 alt="aerial view of trailer lot"
                 fill
                 className="object-cover"

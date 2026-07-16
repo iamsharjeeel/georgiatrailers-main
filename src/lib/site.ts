@@ -32,6 +32,7 @@ export const site = {
     "https://www.google.com/maps/search/?api=1&query=45+Carson+Loop+Rd+NW,+Cartersville,+GA+30121",
   mapEmbedUrl:
     "https://maps.google.com/maps?q=45%20Carson%20Loop%20Rd%20NW%2C%20Cartersville%2C%20GA%2030121&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  logoUrl: "/images/gto_logo.png",
 } as const;
 
 export function formatAddress(shortZip = false) {

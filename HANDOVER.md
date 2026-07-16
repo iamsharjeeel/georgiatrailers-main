@@ -15,9 +15,10 @@ Carrier reviewers need a live, legitimate business site with compliant SMS conse
 ## Files touched
 
 - `src/app/**` — pages, layout, globals
-- `src/components/Header.tsx`, `Footer.tsx`, `ContactForm.tsx`
+- `src/components/Header.tsx`, `Footer.tsx`, `Logo.tsx`, `ContactForm.tsx`
 - `src/lib/site.ts` — shared business constants
-- `next.config.ts` — Unsplash image remote pattern
+- `public/images/` — GTO logo + category/lot photos from georgiatraileroutlet.com
+- `next.config.ts` — remote image patterns
 - `README.md`, `HANDOVER.md`, `CHANGELOG.md`
 
 ## Pending
