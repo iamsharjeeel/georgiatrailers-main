@@ -26,3 +26,4 @@ Carrier reviewers need a live, legitimate business site with compliant SMS conse
 - [VERIFY] founding year / ownership history on About page.
 - Point `georgiatraileroutlet.com` DNS to Vercel after deploy.
 - Optional: swap Unsplash photos for real lot photography.
+- Merge PR into `main` (or set Vercel Production Branch to the feature branch) — `main` currently only has README, so framework auto-detect fails until Next.js files are on the branch Vercel scans.

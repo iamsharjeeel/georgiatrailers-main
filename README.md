@@ -35,9 +35,10 @@ npm run lint
 
 ## Deploy to Vercel
 
-1. Push this repo to GitHub.
-2. Import the project in [Vercel](https://vercel.com/new) — framework preset: Next.js (zero config).
-3. Deploy. Custom domain: point `georgiatraileroutlet.com` to the Vercel project.
+1. Import/connect this GitHub repo in [Vercel](https://vercel.com/new).
+2. Framework preset should be **Next.js** (also pinned in `vercel.json`). Root Directory: `.` (repo root).
+3. Deploy the PR branch for a preview URL, or set Production Branch once `main` has the app.
+4. Custom domain: point `georgiatraileroutlet.com` to the Vercel project.
 
 Or from the CLI:
 
